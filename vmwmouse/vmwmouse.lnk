@@ -1,0 +1,19 @@
+#
+# VMware mouse driver for OS/2
+#
+format os2 dll initglobal
+name vmwmouse.sys
+option description 'VMware mouse driver'
+option protmode
+option nodefaultlibs
+option map=vmwmouse.map
+option quiet
+file vmwmouse.obj
+
+# import DosPutMessage from MSG
+import DOSPUTMESSAGE MSG.1
+
+# segment attributes, order matters
+segment type data shared preload
+segment type code preload
+order clname DATA clname CODE

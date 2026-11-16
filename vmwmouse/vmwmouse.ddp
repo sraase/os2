@@ -1,0 +1,15 @@
+* 
+* VMware mouse driver for OS/2
+*    Device Driver Profile
+* Install with DDINSTAL.EXE.
+* 
+:TITLE
+VMware mouse driver
+
+:FILES
+VMWMOUSE.SYS C:\OS2\VMWMOUSE.SYS
+
+:CONFIG
+DEVICE=C:\OS2\VMWMOUSE.SYS
+DEVICE=C:\OS2\MOUSE.SYS TYPE=VMWMOU$
+
